@@ -52,7 +52,7 @@
                             <td class="text-center"><?= $films->NOM_STAR ?></td>
                             <td class="text-center"><?= $films->PRENOM_STAR ?></td>
                             <td class="text-center">
-                                <a href="VCIResa3.php?ID_FILM=<?= $films->ID_FILM ?>">
+                                <a href="VCIResa3.php?ID_FILM=<?= $films->ID_FILM ?>&Titre_FILM=<?=$films->TITRE_FILM?>">
                             <img src="src/img/FilmMiniatures/<?=$films->LIB_TYPE_FILM.'/'.$films->REF_IMAGE?>" alt="Affiche du film <?= $films->TITRE_FILM ?>">
                                 </a>
                             </td>

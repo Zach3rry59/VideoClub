@@ -35,8 +35,7 @@
         ?>
 
         <div class="col-sm-8">
-            <?= var_dump($_POST); ?>
-            <h2>FILM <?= $_POST['Titre'] ?>sql: <?php var_dump($sql) ?></h2>        
+            <h2>FILM <?= $_POST['Titre'] ?> Ajouté avec succès</h2>        
         </div>
 
 </div>
