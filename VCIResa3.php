@@ -2,7 +2,7 @@
     require_once "src/config/config.php";
     require_once "src/config/database.php";
     $db=connectDb();
-    $sqlRequest = 'SELECT * FROM FILM WHERE ID_FILM = "'.$_GET['ID_FILM'].'"';
+    $sqlRequest = 'SELECT * FROM FILM join typefilm on typefilm.CODE_TYPE_FILM=film.CODE_TYPE_FILM WHERE ID_FILM = "'.$_GET['ID_FILM'].'"';
     $sqlResponse = $db->prepare($sqlRequest);
     $sqlResponse->execute();
     $results = $sqlResponse->fetch(PDO::FETCH_OBJ);
@@ -31,7 +31,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src='src/img/FilmMiniatures/<?= $results->REF_IMAGE ?>'></td>
+                            <td><img src="src/img/FilmMiniatures/<?=$results->LIB_TYPE_FILM.'/'.$results->REF_IMAGE?>" alt="Affiche du film <?= $results->TITRE_FILM ?>"></td>
                             <td><?= $results->TITRE_FILM ?></td>
                             <td><?= $results->ANNEE_FILM ?></td>
                         </tr>
