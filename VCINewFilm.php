@@ -26,7 +26,7 @@
             <div>
                 <h4>Saisie d'un nouveau film !</h4>
             </div>
-            <form method="post" action="VCIAdmin2.php">
+            <form method="post" action="VCINewFilm2.php">
                 <div class="mb-3">
                     <label for="ID" class="form-label">Identifiant :</label>
                     <input type="text" class="form-control col" id="inputID" name="ID">
